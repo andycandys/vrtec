@@ -1,0 +1,41 @@
+@import 'shared';
+
+@import 'loader';
+@import 'ui-root';
+@import 'exited';
+@import 'profile';
+@import 'entry';
+@import 'audio';
+@import 'info-dialog';
+
+body.vr-mode {
+  a-scene {
+    .a-canvas {
+      width: 200% !important;
+    }
+  }
+}
+
+body.mirrored-camera {
+  a-scene {
+    .a-canvas {
+      width: 100% !important;
+    }
+  }
+}
+
+.a-enter-vr, .a-orientation-modal {
+  display: none;
+}
+
+.grab-cursor {
+  cursor: grab;
+}
+
+.no-cursor {
+  cursor: none;
+}
+
+.webxr-realities, .webxr-sessions {
+  @extend %unselectable
+}

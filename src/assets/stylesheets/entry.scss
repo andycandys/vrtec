@@ -1,0 +1,207 @@
+@import 'shared';
+
+:local(.entry-dialog) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
+
+  :local(.collapse) {
+    @extend %fa-icon-button;
+    color: black;
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+  }
+
+  :local(.expand) {
+    @extend %fa-icon-button;
+    color: white;
+    position: absolute;
+    top: -64px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    background-color: $action-color;
+    border-radius: 19px;
+  }
+}
+
+:local(.entry-button) {
+  @extend %action-button;
+  width: 272px;
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  cursor: pointer;
+  color: white;
+  align-items: center;
+  @extend %default-font;
+  border: 0;
+  border-radius: 12px;
+  margin: 6px;
+  padding: 12px 18px;
+  height: auto;
+
+  :local(.icon) {
+    height: 40px;
+    width: 40px;
+  }
+
+  :local(.label) {
+    @extend %glass-text;
+    color: white;
+    flex: 10 1 auto;
+    margin-left: 20px;
+    font-size: 1.0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  :local(.bolded) {
+    font-weight: bold;
+  }
+
+  :local(.subtitle) {
+    font-size: 0.8em;
+    font-weight: normal;
+    color: $light-text;
+  }
+}
+
+:local(.entry-panel) {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  margin: 24px;
+  min-height: 150px;
+  height: 100%;
+  width: 100%;
+
+  :local(.title) {
+    @extend %top-title;
+    @extend %glass-text;
+    margin-bottom: 12px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  :local(.name) {
+    @extend %top-title;
+    @extend %glass-text;
+    margin-bottom: 4px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  :local(.lobby) {
+    margin-bottom: 24px;
+    margin-right: 8px;
+    margin-left: 8px;
+    font-size: 0.9em;
+  }
+
+  :local(.center) {
+    @extend %glass-text;
+    flex: 10;
+    width: 100%;
+  }
+
+  :local(.profile-name) {
+    margin-top: 4px;
+    margin-bottom: 32px;
+    @extend %default-font;
+    font-size: 1.1em;
+    color: $action-color;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :local(.profile-icon) {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+  }
+
+  :local(.button-container) {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+
+    :local(.action-button) {
+      @extend %action-button;
+    }
+
+    :local(.wide-button) {
+      @extend %wide-button;
+    }
+  }
+
+  :local(.webvr-link-container) {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  :local(.webvr-link) {
+    color: white;
+    flex: 1;
+    min-height: max-content;
+  }
+
+  :local(.screen-sharing) {
+    font-size: 1.4em;
+    margin-left: 2.95em;
+    margin-top: 0.6em;
+
+    :local(.checkbox) {
+      @extend %checkbox;
+    }
+
+    :local(.checkbox:checked) {
+      @extend %checkbox-checked;
+    }
+  }
+
+  :local(.secondary) {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    color: $dark-grey-text;
+  }
+
+  :local(.subscribe) {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $darker-grey;
+
+    input {
+      @extend %checkbox;
+    }
+
+    input:checked {
+      @extend %checkbox-checked;
+    }
+
+    label {
+      margin-right: 8px;
+    }
+  }
+}
